@@ -91,7 +91,7 @@ const translatePath = useTranslatedPath(lang);
 <script>
 	import { gsap } from "gsap";
 	import { ScrollTrigger } from "gsap/ScrollTrigger";
-	import { SplitText } from "gsap/SplitText";
+	import { SplitText } from "@/utils/gsap-plugins.js";
 	import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 	gsap.registerPlugin(ScrollTrigger, SplitText, ScrollToPlugin);

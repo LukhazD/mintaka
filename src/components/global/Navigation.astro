@@ -289,7 +289,7 @@ const { pathname } = Astro.url;
 <script>
 	import { gsap } from "gsap";
 	import { ScrollTrigger } from "gsap/ScrollTrigger";
-	import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+	import { DrawSVGPlugin } from "@/utils/gsap-plugins.js";
 
 	gsap.registerPlugin(DrawSVGPlugin, ScrollTrigger);
 
