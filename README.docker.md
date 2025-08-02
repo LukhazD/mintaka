@@ -4,9 +4,10 @@ Este documento proporciona instrucciones para desplegar Mintaka como un contened
 
 ## Archivos incluidos
 
-- `Dockerfile`: Configuración para construir la imagen de Docker
+- `Dockerfile`: Configuración para construir la imagen de Docker usando Node.js y pnpm
 - `.dockerignore`: Lista de archivos y directorios excluidos del contexto de construcción
 - `docker-compose.yml`: Configuración para desplegar el servicio con Docker Compose
+- `.npmrc`: Configuración de npm modificada para usar la versión estándar de GSAP
 
 ## Puerto expuesto
 
@@ -61,5 +62,6 @@ El contenedor está configurado con `NODE_ENV=production` por defecto. Si necesi
 ## Notas adicionales
 
 - La imagen utiliza Node.js 20 Alpine como base para minimizar el tamaño
-- Se utiliza Bun para la instalación de dependencias y construcción
-- La aplicación se sirve utilizando el comando `bun run preview`
+- Se utiliza pnpm para la instalación de dependencias y construcción
+- La aplicación se sirve utilizando el comando `pnpm run preview`
+- Se ha modificado la dependencia de GSAP para usar la versión estándar (3.12.7) en lugar de la versión business que requiere licencia premium
