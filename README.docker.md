@@ -61,16 +61,19 @@ El contenedor está configurado con `NODE_ENV=production` por defecto. Si necesi
 
 ## Configuración del proxy inverso
 
-El proyecto incluye una configuración de proxy inverso con Nginx para redirigir el tráfico del puerto 80 (HTTP estándar) al puerto 3055 donde se ejecuta la aplicación:
+El proyecto incluye una configuración completa de proxy inverso con Nginx para redirigir el tráfico del puerto 80 (HTTP estándar) al puerto 3055 donde se ejecuta la aplicación:
 
-- `nginx.conf`: Archivo de configuración de Nginx que define cómo se redirige el tráfico
+- `nginx.conf`: Archivo de configuración de Nginx con optimizaciones para producción
 - `docker-compose.override.yml`: Añade un servicio de Nginx que actúa como proxy inverso
 
-Esta configuración permite:
+Esta configuración incluye:
 
-1. Acceder a la aplicación a través del puerto estándar HTTP (80)
-2. Implementar reglas de caché y compresión a nivel de servidor web
-3. Facilitar la configuración de SSL/TLS en el futuro
+1. Acceso a la aplicación a través del puerto estándar HTTP (80)
+2. Compresión Gzip para mejorar el rendimiento
+3. Caché de activos estáticos con expiración de 1 año
+4. Cabeceras de seguridad (X-Frame-Options, CSP, etc.)
+5. Soporte para enrutamiento del lado del cliente (SPA)
+6. Configuración optimizada para conexiones WebSocket
 
 ## Notas adicionales
 
