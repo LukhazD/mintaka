@@ -12,6 +12,16 @@ export default defineConfig({
 				usePolling: true,
 			},
 		},
+		build: {
+			rollupOptions: {
+				external: [
+					"gsap/MorphSVGPlugin",
+					"gsap/DrawSVGPlugin",
+					"gsap/SplitText",
+					"gsap/MotionPathPlugin"
+				]
+			}
+		},
 	},
 	site: "https://mintaka.co",
 	i18n: {
