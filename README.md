@@ -1,7 +1,7 @@
 # [Mintaka](https://mintaka.majestico.co)
 
-> [!IMPORTANT]
-> Currently this theme only works with the premium version of GSAP, the steps to use the standard version will be available in the future.
+> [!NOTE]
+> Este tema ahora funciona con la versión estándar de GSAP. Se han implementado shims para los plugins premium, pero si necesitas la funcionalidad completa, considera adquirir una licencia de GSAP Business.
 
 <a href="https://astro.build/">![Astro](.github/images/astro-icon.png)</a>
 <a href="https://tailwindcss.com/">![Tailwind](.github/images/tailwind-icon.png)</a>

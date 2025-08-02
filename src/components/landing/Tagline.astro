@@ -49,7 +49,9 @@ const translatePath = useTranslatedPath(lang);
 <script>
 	import { gsap } from "gsap";
 	import { ScrollTrigger } from "gsap/ScrollTrigger";
-	import { SplitText, DrawSVGPlugin, MotionPathPlugin } from "@/utils/gsap-plugins.js";
+	import { SplitText } from "gsap/SplitText";
+	import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+	import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
 	gsap.registerPlugin(ScrollTrigger, SplitText, DrawSVGPlugin, MotionPathPlugin);
 

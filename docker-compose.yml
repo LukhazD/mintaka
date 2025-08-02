@@ -7,7 +7,13 @@ services:
       dockerfile: Dockerfile
     container_name: mintaka
     restart: unless-stopped
-    ports:
-      - "3055:3055"
+    expose:
+      - "3055"
     environment:
       - NODE_ENV=production
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

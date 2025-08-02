@@ -20,7 +20,7 @@ COPY . .
 RUN pnpm run build
 
 # Expose the custom port
-EXPOSE 3055
+EXPOSE 80 3055
 
 # Start the app
 CMD ["pnpm", "run", "preview", "--", "--host", "0.0.0.0", "--port", "3055"]
