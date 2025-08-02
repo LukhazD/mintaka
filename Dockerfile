@@ -1,4 +1,4 @@
-FROM node:20-alpine AS base
+FROM oven/bun:1.0 as base
 
 # Set working directory
 WORKDIR /app
@@ -6,11 +6,6 @@ WORKDIR /app
 # Install dependencies
 COPY package.json ./
 COPY bun.lock ./
-
-# Install bun
-RUN apk add --no-cache unzip
-RUN wget -q https://github.com/oven-sh/bun/releases/download/bun-v1.0.25/bun-linux-x64.zip
-RUN unzip bun-linux-x64.zip && chmod +x ./bun-linux-x64/bun && mv ./bun-linux-x64/bun /usr/local/bin && rm -rf bun-linux-x64*
 
 # Install dependencies
 RUN bun install
